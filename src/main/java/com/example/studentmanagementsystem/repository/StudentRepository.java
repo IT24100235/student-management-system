@@ -1,4 +1,11 @@
 package com.example.studentmanagementsystem.repository;
 
-public class StudentRepository {
+import com.example.studentmanagementsystem.model.Student;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface StudentRepository extends JpaRepository<Student, Long> {
+    // This interface allows you to Save, Delete, and Find students
+    // without writing any SQL code.
 }
